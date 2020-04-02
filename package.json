@@ -35,8 +35,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test:ci": "npm run test --  --coverage --runInBand  --testPathIgnorePatterns=src/__tests__/",
+    "prepush": "npm run lint && npm run test",
+    "test": "react-scripts test  --testPathIgnorePatterns=src/__tests__/",
+    "test:ci": "npm run test --  --coverage --runInBand",
     "lint": "eslint -c .eslintrc src/**/*.js"
   },
   "browserslist": {
@@ -60,6 +61,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
+    "husky": "^4.2.3",
     "prettier": "^2.0.2"
   }
 }
