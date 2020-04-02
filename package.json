@@ -14,10 +14,28 @@
     "react-scripts": "3.4.1",
     "styled-components": "^5.0.1"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!src/routes.js",
+      "!**/index.js",
+      "!**/node_modules/**",
+      "!**/public/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ci": "react-scripts test --coverage --runInBand",
     "lint": "eslint -c .eslintrc src/**/*.js"
   },
   "browserslist": {
