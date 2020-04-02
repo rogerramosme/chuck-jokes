@@ -1,13 +1,17 @@
 {
   "extends": ["react-app", "prettier", "airbnb", "airbnb/hooks"],
-
   "plugins": ["prettier"],
-
   "rules": {
     "prettier/prettier": "error",
     "comma-dangle": "off",
     "semi": "off",
     "operator-linebreak": "off",
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
+    "arrow-parens": "off",
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
   }
 }
