@@ -11,6 +11,7 @@
   "rules": {
     "prettier/prettier": "error",
     "comma-dangle": "off",
+    "semi": "off",
     "operator-linebreak": "off",
     "react/jsx-filename-extension": "off"
   }
