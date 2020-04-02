@@ -2,12 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { ThemeProvider } from 'styled-components'
 import theme from 'config/theme'
+import GlobalStyles from 'config/global-styles'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>Hello World</ThemeProvider>
-  </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+    <React.StrictMode>
+      <GlobalStyles />
+      <div>Hello World</div>
+    </React.StrictMode>
+  </ThemeProvider>,
   document.getElementById('root')
 )
 

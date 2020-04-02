@@ -3,11 +3,10 @@ import { createGlobalStyle } from 'styled-components'
 export default createGlobalStyle`
   body * {
     font-weight: 300;
-    font-size: 14px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscal;
     -webkit-overflow-scrolling: touch;
-    color: ${props => props.theme.colors.blue};
+    color: ${props => props.theme.colors.black};
   }
 
   html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
@@ -28,7 +27,8 @@ export default createGlobalStyle`
   }
 
   body {
-    line-height: 1;
+    font-size: ${props => props.theme.typography.body.fontSize};
+    line-height: ${props => props.theme.typography.body.lineHeight};
   }
 
   ol, ul {
