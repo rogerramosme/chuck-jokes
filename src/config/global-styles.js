@@ -3,10 +3,12 @@ import { createGlobalStyle } from 'styled-components'
 export default createGlobalStyle`
   body * {
     font-weight: 300;
+    font-family: 'Baloo Thambi 2', cursive;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscal;
     -webkit-overflow-scrolling: touch;
     color: ${props => props.theme.colors.black};
+    background-color: ${props => props.theme.colors.yellow};
   }
 
   html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
@@ -27,8 +29,8 @@ export default createGlobalStyle`
   }
 
   body {
-    font-size: ${props => props.theme.typography.body.fontSize};
-    line-height: ${props => props.theme.typography.body.lineHeight};
+    font-size: ${props => props.theme.fonts.body.fontSize};
+    line-height: ${props => props.theme.fonts.body.lineHeight};
   }
 
   ol, ul {
