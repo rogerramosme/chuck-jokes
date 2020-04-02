@@ -1,10 +1,10 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { renderWithTheme } from '__tests__/utils'
 import Intro from './Intro'
 
 describe('Intro page', () => {
   it('Should render intro page', () => {
-    const { queryByText } = render(<Intro />)
-    expect(queryByText(/Wellcome to intro/)).toBeInTheDocument()
+    const { queryByText } = renderWithTheme(<Intro />)
+    expect(queryByText(/Chuck Jokes/)).toBeInTheDocument()
   })
 })
