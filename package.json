@@ -16,11 +16,12 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "**/*.js",
-      "!src/routes.js",
-      "!**/index.js",
-      "!**/node_modules/**",
-      "!**/public/**"
+      "src/components/**/*.js",
+      "src/pages/**/*.js",
+      "!src/**/index.js",
+      "!node_modules/**",
+      "!**/public/**",
+      "!**/*.style.js"
     ],
     "coverageThreshold": {
       "global": {
@@ -35,7 +36,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:ci": "react-scripts test --coverage --runInBand",
+    "test:ci": "npm run test --  --coverage --runInBand  --testPathIgnorePatterns=src/__tests__/",
     "lint": "eslint -c .eslintrc src/**/*.js"
   },
   "browserslist": {
