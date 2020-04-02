@@ -1,10 +1,5 @@
 {
-  "extends": [
-    "react-app",
-    "plugin:prettier/recommended",
-    "airbnb",
-    "airbnb/hooks"
-  ],
+  "extends": ["react-app", "prettier", "airbnb", "airbnb/hooks"],
 
   "plugins": ["prettier"],
 
