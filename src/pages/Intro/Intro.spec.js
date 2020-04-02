@@ -1,5 +1,5 @@
 import React from 'react'
-import { renderWithTheme } from '__tests__/utils'
+import renderWithTheme from '__tests__/utils'
 import Intro from './Intro'
 
 describe('Intro page', () => {
