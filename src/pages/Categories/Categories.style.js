@@ -29,5 +29,6 @@ export const CategoryList = styled.section`
 `
 
 export const Button = styled(BaseButton)`
+  width: 100%;
   text-transform: Capitalize;
 `
