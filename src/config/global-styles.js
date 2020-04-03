@@ -8,7 +8,6 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscal;
     -webkit-overflow-scrolling: touch;
     color: ${props => props.theme.colors.black};
-    background-color: ${props => props.theme.colors.yellow};
   }
 
   html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
@@ -31,6 +30,7 @@ export default createGlobalStyle`
   body {
     font-size: ${props => props.theme.fonts.body.fontSize};
     line-height: ${props => props.theme.fonts.body.lineHeight};
+    background-color: ${props => props.theme.colors.yellow};
   }
 
   ol, ul {
@@ -60,7 +60,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body, #app, main, .container {
+  html, body, #app {
     height: 100%;
     width: 100%;
   }
