@@ -4,5 +4,5 @@ export default styled.main`
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding: 42px;
+  padding: 70px 42px;
 `
