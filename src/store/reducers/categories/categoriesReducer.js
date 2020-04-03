@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   isFetching: false,
   isSuccess: false,
   isError: false,

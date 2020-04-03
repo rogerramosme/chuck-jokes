@@ -23,6 +23,7 @@
     "collectCoverageFrom": [
       "src/components/**/*.js",
       "src/pages/**/*.js",
+      "src/store/reducers/**/*.js",
       "!src/**/index.js",
       "!src/routes.js",
       "!src/config/*.js",
