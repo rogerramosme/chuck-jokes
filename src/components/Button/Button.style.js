@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 
-export default styled(Link)`
+export default styled.button`
   font-size: ${props => props.theme.fonts.button.fontSize};
   font-weight: ${props => props.theme.fonts.weight.normal};
   display: inline-flex;
@@ -15,6 +14,9 @@ export default styled(Link)`
   text-decoration: none;
   justify-content: center;
   align-items: center;
+  background-color: ${({ outline, theme }) => (outline ? 'transparent' : theme.colors.black)};
+  color: ${({ outline, theme }) => (outline ? theme.colors.black : theme.colors.white)};
+  border: solid 3px ${({ outline, theme }) => (outline ? theme.colors.black : 'transparent')};
 
   &:hover,
   &focus {
@@ -25,6 +27,4 @@ export default styled(Link)`
     outline: 2px dotted ${props => props.theme.colors.blue};
     outline-offset: 8px;
   }
-  background-color: ${({ outline, theme }) => (outline ? 'transparent' : theme.colors.black)};
-  color: ${({ outline, theme }) => (outline ? theme.colors.black : theme.colors.white)};
 `
