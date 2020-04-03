@@ -1,19 +1,15 @@
 import styled from 'styled-components'
 import BaseButton from 'components/Button'
+import BaseChuckJokesLogo from 'components/ChuckJokesLogo'
+import BaseContent from 'components/Content'
 
-export const Wrapper = styled.main`
-  display: flex;
+export const Content = styled(BaseContent)`
   min-height: 100vh;
-  flex-flow: column;
-  align-items: center;
   justify-content: center;
-  padding: 42px;
   text-align: center;
 `
 
-export const ChuckJokesLogo = styled.img`
-  width: 100%;
-  max-width: 157px;
+export const ChuckJokesLogo = styled(BaseChuckJokesLogo)`
   margin-bottom: 30px;
 `
 
