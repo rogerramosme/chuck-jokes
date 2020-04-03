@@ -9,15 +9,15 @@ const Tokens = {
   fonts: {
     title: {
       fontSize: '48px',
-      lineHeight: '72px'
+      lineHeight: '56px'
     },
     subtitle: {
       fontSize: '24px',
-      lineHeight: '42px'
+      lineHeight: '30px'
     },
     body: {
       fontSize: '18px',
-      lineHeight: '30px'
+      lineHeight: '24px'
     },
     button: {
       fontSize: '16px',
