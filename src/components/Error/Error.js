@@ -9,7 +9,7 @@ export default function Error({ buttonText, handleError, errorMessage }) {
       <ErrorSubtitle>And this isn&apos;t a joke</ErrorSubtitle>
       <ErrorDescription>{errorMessage}</ErrorDescription>
       {buttonText && <Button onClick={handleError}>{buttonText}</Button>}
-      <Link to="/intro">
+      <Link to="/">
         <Button outline={buttonText.length}>Go Home</Button>
       </Link>
     </Content>
