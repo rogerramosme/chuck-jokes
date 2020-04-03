@@ -7,6 +7,7 @@ import breakpoints from 'config/media'
 export const Content = styled(BaseContent)`
   justify-content: center;
   text-align: center;
+  min-height: 100vh;
 `
 
 export const ErrorTitle = styled.h1`
