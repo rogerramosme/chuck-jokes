@@ -11,6 +11,7 @@
     "import/no-unresolved": "off",
     "object-curly-newline": "off",
     "react/jsx-props-no-spreading": "off",
-    "no-confusing-arrow": "off"
+    "no-confusing-arrow": "off",
+    "no-underscore-dangle": "off"
   }
 }
