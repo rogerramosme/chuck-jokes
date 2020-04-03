@@ -1,8 +1,10 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
-export default styled.button`
+export default styled(Link)`
   font-size: ${props => props.theme.fonts.button.fontSize};
   font-weight: ${props => props.theme.fonts.weight.normal};
+  display: inline-flex;
   height: 60px;
   padding: 0 24px;
   border-radius: ${props => props.theme.defaults.radius};
@@ -10,6 +12,9 @@ export default styled.button`
   user-select: none;
   cursor: pointer;
   transition: all ${props => props.theme.defaults.transitionTime};
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
 
   &:hover,
   &focus {
@@ -20,15 +25,6 @@ export default styled.button`
     outline: 2px dotted ${props => props.theme.colors.blue};
     outline-offset: 8px;
   }
-
-  ${props =>
-    props.outline
-      ? `
-    background-color: 'transparent';
-    color: ${props.theme.colors.black};
-    `
-      : `
-    background-color: ${props.theme.colors.black};
-    color: ${props.theme.colors.white};
-  `}
+  background-color: ${({ outline, theme }) => (outline ? 'transparent' : theme.colors.black)};
+  color: ${({ outline, theme }) => (outline ? theme.colors.black : theme.colors.white)};
 `
