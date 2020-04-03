@@ -1,5 +1,6 @@
 import React from 'react'
 import { string, func } from 'prop-types'
+import { ROUTES } from 'routes'
 import { Content, ErrorTitle, ErrorSubtitle, ErrorDescription, Button, Link } from './Error.style'
 
 export default function Error({ buttonText, handleError, errorMessage }) {
@@ -9,7 +10,7 @@ export default function Error({ buttonText, handleError, errorMessage }) {
       <ErrorSubtitle>And this isn&apos;t a joke</ErrorSubtitle>
       <ErrorDescription>{errorMessage}</ErrorDescription>
       {buttonText && <Button onClick={handleError}>{buttonText}</Button>}
-      <Link to="/">
+      <Link to={ROUTES.INTRO}>
         <Button outline={buttonText.length}>Go Home</Button>
       </Link>
     </Content>
