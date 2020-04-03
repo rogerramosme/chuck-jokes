@@ -8,6 +8,9 @@
     "operator-linebreak": "off",
     "react/jsx-filename-extension": "off",
     "arrow-parens": "off",
-    "import/no-unresolved": 0
+    "import/no-unresolved": "off",
+    "object-curly-newline": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-confusing-arrow": "off"
   }
 }
