@@ -24,6 +24,8 @@
       "src/components/**/*.js",
       "src/pages/**/*.js",
       "!src/**/index.js",
+      "!src/routes.js",
+      "!src/config/*.js",
       "!node_modules/**",
       "!**/public/**",
       "!**/*.style.js"
@@ -40,10 +42,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "prepush": "npm run lint && npm run test",
     "test": "react-scripts test  --testPathIgnorePatterns=src/__tests__/",
-    "test:ci": "npm run test --  --coverage --runInBand",
+    "test:ci": "npm run test --  --coverage --runInBand --no-cache --watchAll=false",
     "lint": "eslint -c .eslintrc src/**/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test:ci"
+    }
   },
   "browserslist": {
     "production": [
