@@ -27,7 +27,7 @@ export default memo(() => {
     <>
       {!isError ? (
         <Content>
-          {isFetching && <Loading />}
+          {isFetching && <Loading data-testid="loader" />}
           {!isFetching && isSuccess && (
             <>
               <ChuckJokesLogo />
