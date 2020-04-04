@@ -8,7 +8,8 @@ export const initialState = {
 
 export const ACTION_TYPES = {
   CATEGORIES_REQUEST: 'CATEGORIES_REQUEST',
-  CATEGORIES_REQUEST_SUCCESS: 'CATEGORIES_REQUEST_SUCCESS'
+  CATEGORIES_REQUEST_SUCCESS: 'CATEGORIES_REQUEST_SUCCESS',
+  CATEGORIES_REQUEST_ERROR: 'CATEGORIES_REQUEST_ERROR'
 }
 
 export const categoriesRequest = () => ({
@@ -18,6 +19,11 @@ export const categoriesRequest = () => ({
 export const categoriesRequestSuccess = payload => ({
   type: ACTION_TYPES.CATEGORIES_REQUEST_SUCCESS,
   payload
+})
+
+export const categoriesRequestError = error => ({
+  type: ACTION_TYPES.CATEGORIES_REQUEST_ERROR,
+  payload: error
 })
 
 export default (state = initialState, { type, payload }) => {
@@ -36,6 +42,15 @@ export default (state = initialState, { type, payload }) => {
         isFetching: false,
         isSuccess: true,
         data: payload
+      }
+    case ACTION_TYPES.CATEGORIES_REQUEST_ERROR:
+      return {
+        ...state,
+        isFetching: false,
+        isSuccess: false,
+        isError: true,
+        error: payload,
+        data: []
       }
     default:
       return state

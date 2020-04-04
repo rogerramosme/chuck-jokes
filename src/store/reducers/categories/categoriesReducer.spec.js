@@ -1,7 +1,8 @@
 import categoriesReducer, {
   initialState,
   categoriesRequest,
-  categoriesRequestSuccess
+  categoriesRequestSuccess,
+  categoriesRequestError
 } from './categoriesReducer'
 
 describe('Categories Reducer', () => {
@@ -20,9 +21,17 @@ describe('Categories Reducer', () => {
     const mockResult = ['food', 'dev']
     expect(categoriesReducer(undefined, categoriesRequestSuccess(mockResult))).toEqual({
       ...initialState,
-      isFetching: false,
       isSuccess: true,
       data: mockResult
+    })
+  })
+
+  it('Should set CATEGORIES_REQUEST_ERROR state', () => {
+    const error = 'Cannot get joke categories'
+    expect(categoriesReducer(undefined, categoriesRequestError(error))).toEqual({
+      ...initialState,
+      isError: true,
+      error
     })
   })
 })
