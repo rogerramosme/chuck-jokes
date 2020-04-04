@@ -8,13 +8,14 @@ import Error from './Error'
 
 const errorMessage = 'Something wrong isnt right'
 const buttonText = 'Try again'
+const handleError = jest.fn()
 
 const renderComponent = props =>
   renderWithTheme(
     <MemoryRouter initialEntries={['/error']}>
       <Switch>
         <Route exact path="/error">
-          <Error {...props} />
+          <Error handleError={handleError} {...props} />
         </Route>
         <Route exact path="/">
           <div>Intro Page</div>
@@ -39,7 +40,6 @@ describe('Error component', () => {
 
     it('Should render outline "Go Home" button when buttonText does not exists', () => {
       const { getByText } = renderComponent({ buttonText })
-
       const buttonComputedStyles = window.getComputedStyle(getByText('Go Home'))
 
       expect(buttonComputedStyles.borderColor).toEqual(theme.colors.black)
@@ -54,9 +54,8 @@ describe('Error component', () => {
 
   describe('Interations', () => {
     it('Should call handleError onClick', () => {
-      const handleError = jest.fn()
-
       const { getByText } = renderComponent({ buttonText, handleError })
+
       act(() => {
         fireEvent.click(getByText(buttonText))
       })

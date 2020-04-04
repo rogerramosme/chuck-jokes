@@ -19,12 +19,11 @@ export default function Error({ buttonText, handleError, errorMessage }) {
 
 Error.propTypes = {
   buttonText: string,
-  handleError: func,
+  handleError: func.isRequired,
   errorMessage: string
 }
 
 Error.defaultProps = {
   buttonText: '',
-  handleError: () => {},
   errorMessage: ''
 }
