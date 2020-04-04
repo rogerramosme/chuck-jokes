@@ -13,6 +13,7 @@
     "react/jsx-props-no-spreading": "off",
     "no-confusing-arrow": "off",
     "no-underscore-dangle": "off",
-    "implicit-arrow-linebreak": "off"
+    "implicit-arrow-linebreak": "off",
+    "dot-notation": "off"
   }
 }
