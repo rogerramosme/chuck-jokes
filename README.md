@@ -8,7 +8,9 @@ Just a cool Chuck Norris Jokes reader using [ChuckNorris.io](https://api.chuckno
 - React (Create React Appp)
 - Styled components 💅🏽
 - Linting (Eslint and Prettier)
-- Precommit Hooks with husky
+- Pre-commit and Pre-push Hooks with husky
+- Redux
+- Redux Saga Middleware
 
 ## ⚙️ Requires
 
@@ -27,7 +29,7 @@ To ensure code quality and consistency, I recommend [Visual Studio Code](https:/
 | --------- | -------------------------------------- |
 | npm start | start local server at `localhost:3000` |
 
-## 🔍 Testing
+## 👨‍🔬 Testing
 
 | command         | description             |
 | --------------- | ----------------------- |
