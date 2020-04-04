@@ -1,6 +1,6 @@
 import React from 'react'
 import { fireEvent } from '@testing-library/react'
-import renderWithTheme from '__tests__/utils'
+import { renderWithThemeAndProvider } from '__tests__/utils'
 import { MemoryRouter, Route, Switch } from 'react-router-dom'
 import theme from 'config/theme'
 import { act } from 'react-dom/test-utils'
@@ -11,7 +11,7 @@ const buttonText = 'Try again'
 const handleError = jest.fn()
 
 const renderComponent = props =>
-  renderWithTheme(
+  renderWithThemeAndProvider(
     <MemoryRouter initialEntries={['/error']}>
       <Switch>
         <Route exact path="/error">
@@ -24,7 +24,7 @@ const renderComponent = props =>
     </MemoryRouter>
   )
 
-describe('Error component', () => {
+describe.only('Error component', () => {
   describe('Rendering', () => {
     it('Should render error message', () => {
       const { getByText } = renderComponent({ errorMessage })
