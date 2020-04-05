@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { ROUTES } from 'routes'
 import { string } from 'prop-types'
 
@@ -22,4 +22,4 @@ Navigation.defaultProps = {
   category: ''
 }
 
-export default Navigation
+export default memo(Navigation)
