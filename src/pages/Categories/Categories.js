@@ -1,6 +1,7 @@
 import React, { useEffect, useCallback, memo } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
+import { ROUTES } from 'routes'
 import { categoriesRequest } from 'store/reducers/categories'
 import Content from 'components/Content'
 import Loading from 'components/Loading'
@@ -35,7 +36,7 @@ export default memo(() => {
               <CategoriesIntro>Select a category to start laughting. No pressure.</CategoriesIntro>
               <CategoryList>
                 {data.map(category => (
-                  <Link key={category} to={`/category/${category}`}>
+                  <Link key={category} to={`${ROUTES.RAMDOM_JOKE}/${category}`}>
                     <Button>{category}</Button>
                   </Link>
                 ))}
