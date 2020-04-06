@@ -1,11 +1,9 @@
 import React from 'react'
-import { cleanup, fireEvent } from '@testing-library/react'
-import { act } from 'react-dom/test-utils'
+import { cleanup } from '@testing-library/react'
 import { renderWithThemeAndProvider, mockStore } from '__tests__/utils'
 import { MemoryRouter, Route, Switch } from 'react-router-dom'
 import { ROUTES } from 'routes'
 import { initialState } from 'store/reducers/categories'
-import getCategories from 'services'
 import Categories from './Categories'
 
 jest.mock('services')
