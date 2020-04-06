@@ -20,7 +20,8 @@ export default styled.button`
 
   &:hover,
   &focus {
-    background-color: ${props => props.theme.colors.grey};
+    color: ${props => props.theme.colors.white};
+    background-color: ${({ outline, theme }) => (outline ? theme.colors.black : theme.colors.grey)};
   }
 
   &:focus {
