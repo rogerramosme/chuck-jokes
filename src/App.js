@@ -15,7 +15,7 @@ sagaMiddleWare.run(rootSaga)
 
 export default () => {
   useEffect(() => {
-    document.querySelector('.loading').classList.add('hide')
+    document.querySelector('.loading').classList.add('loading--hidden')
   }, [])
   return (
     <ThemeProvider theme={theme}>
