@@ -41,7 +41,7 @@ export default (state = initialState, { type, payload }) => {
         ...state,
         isFetching: false,
         isSuccess: true,
-        data: payload
+        data: payload.data
       }
     case ACTION_TYPES.CATEGORIES_REQUEST_ERROR:
       return {

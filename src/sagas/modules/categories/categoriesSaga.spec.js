@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects'
 import { cloneableGenerator } from '@redux-saga/testing-utils'
-import getCategoriesService from 'services'
+import * as api from 'services'
 import {
   ACTION_TYPES,
   categoriesRequestSuccess,
@@ -11,14 +11,14 @@ import watchCategories, { getCategories } from './categoriesSaga'
 const { CATEGORIES_REQUEST } = ACTION_TYPES
 
 describe('Categories Saga Module', () => {
-  it('check if home saga watcher dispatchs takeLatest home request', () => {
+  it('check if Categories saga watcher dispatchs takeLatest categories request', () => {
     const watchCategoriesGen = watchCategories()
     expect(watchCategoriesGen.next().value).toEqual(takeLatest(CATEGORIES_REQUEST, getCategories))
   })
 
   it('Should call categories', () => {
     const categoriesGen = cloneableGenerator(getCategories)()
-    expect(categoriesGen.next().value).toEqual(call(getCategoriesService))
+    expect(categoriesGen.next().value).toEqual(call(api.categories))
   })
 
   it('Should dispatch CATEGORIES_REQUEST_SUCCESS', () => {

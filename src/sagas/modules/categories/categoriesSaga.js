@@ -1,5 +1,5 @@
 import { put, takeLatest, call } from 'redux-saga/effects'
-import getCategoriesService from 'services'
+import * as api from 'services'
 import {
   ACTION_TYPES,
   categoriesRequestSuccess,
@@ -10,10 +10,10 @@ const { CATEGORIES_REQUEST } = ACTION_TYPES
 
 export function* getCategories() {
   try {
-    const response = yield call(getCategoriesService)
+    const response = yield call(api.categories)
     yield put(categoriesRequestSuccess(response))
   } catch (error) {
-    yield put(categoriesRequestError('Cannot load categories'))
+    yield put(categoriesRequestError(error))
   }
 }
 
