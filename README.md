@@ -1,5 +1,8 @@
-#Chuck Jokes
+# Chuck Jokes
+
 [![Build Status](https://travis-ci.com/rogerramosme/chuck-jokes.svg?branch=master)](https://travis-ci.com/rogerramosme/chuck-jokes)
+[![Maintainability](https://api.codeclimate.com/v1/badges/801b9c6bc48af9960f4b/maintainability)](https://codeclimate.com/github/rogerramosme/chuck-jokes/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/801b9c6bc48af9960f4b/test_coverage)](https://codeclimate.com/github/rogerramosme/chuck-jokes/test_coverage)
 
 Just a cool Chuck Norris Jokes reader using [ChuckNorris.io](https://api.chucknorris.io/)
 
