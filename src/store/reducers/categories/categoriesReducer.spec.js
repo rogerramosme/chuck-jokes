@@ -19,7 +19,7 @@ describe('Categories Reducer', () => {
 
   it('Should set CATEGORIES_REQUEST_SUCCESS state', () => {
     const mockResult = ['food', 'dev']
-    expect(categoriesReducer(undefined, categoriesRequestSuccess(mockResult))).toEqual({
+    expect(categoriesReducer(undefined, categoriesRequestSuccess({ data: mockResult }))).toEqual({
       ...initialState,
       isSuccess: true,
       data: mockResult

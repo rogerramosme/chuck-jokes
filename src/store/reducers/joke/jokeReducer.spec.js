@@ -18,8 +18,8 @@ describe('Joke Reducer', () => {
   })
 
   it('Should set JOKE_REQUEST_SUCCESS state', () => {
-    const mockResult = ['food', 'dev']
-    expect(jokeReducer(undefined, jokeRequestSuccess(mockResult))).toEqual({
+    const mockResult = 'response content'
+    expect(jokeReducer(undefined, jokeRequestSuccess({ data: mockResult }))).toEqual({
       ...initialState,
       isSuccess: true,
       data: mockResult
