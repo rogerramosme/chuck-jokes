@@ -11,8 +11,7 @@ script:
 - npm run build
 deploy:
   provider: netlify
-  site: "chuckfacts"
-  auth:
-    secure: p1gyKlcHZdFothlROnMhZ6g0542LBqzvaduKEHkcmeVTRc3y+jBxaJlyjs4p2A7Z2X76jDr0RWLsJHYyytnSCZ4o2UVLu/hJq/V01+a2na9ixRH35G1S8XuTC7tAQrZ3dVwePOw57spygAKSDJXDxPqYzzA4S8eoSevquwXBgrMqS+Fy3IJFMSbiT+rudCCRf+trF0U3vGh4DEPGsMXADBGNYnJDKxYiEw1IW1IuNutw1Ge+sI2KW+LH8iflwVO+SoTg0JxtyV7kk+FctbWtSuBSgkgVaFEQD2qg9G8EmVCbaNd1u0XmX8vN2qcQncEeT9kbgPY4SGTBtCQQUQK61OM7jgFojdNJy/IJcAnQIxTPeVXU2r+mLekkS8Wiz1rObKptI964KzIw/7wM0UbXetYgrzDEhyWTFFcnfo6NFCqm1EMw2TrWznYNNVE+zTDfm0J6RW57KEcuCCp7vQpwUCXVBlOe6ikjay9bS2UAgoaHodb3DNztOb9v5W96D9T/0yByPydS2h/Z9dThmC6MXNaRiEeb0hbvsrkt9/s79dH6O20waSNREmVlFt9GpPmjINiCIAOJZ9tJwMCfRYu5Zv2GkkGJlgqECnkp0nhb70Hvk1YNlzvvQ+HdN3GtbmtkJc7qK2hRowhPevwgUe1khsMbc/O3qZLKyGxG9+vx52M=
+  site: $NETLIFY_SITE
+  auth: $NETLIFY_AUTH
   dir: build/
   edge: true
