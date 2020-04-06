@@ -15,7 +15,7 @@ import {
 } from './Categories.style'
 
 export default memo(() => {
-  const { isFetching, isSuccess, isError, error, data } = useSelector(state => state.categories)
+  const { isFetching, isSuccess, isError, data } = useSelector(state => state.categories)
   const dispatch = useDispatch()
 
   const handleCategoriesRequest = useCallback(() => dispatch(categoriesRequest()), [dispatch])
@@ -45,7 +45,11 @@ export default memo(() => {
           )}
         </Content>
       ) : (
-        <Error buttonText="Try again" errorMessage={error} handleError={handleCategoriesRequest} />
+        <Error
+          buttonText="Try again"
+          errorMessage="Cannot get joke categories. Pleas try again later"
+          handleError={handleCategoriesRequest}
+        />
       )}
     </>
   )

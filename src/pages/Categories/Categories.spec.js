@@ -43,7 +43,7 @@ describe('Categories Page', () => {
   })
 
   it('Should render Error page', () => {
-    const error = 'Cannot get categories'
+    const error = 'Cannot get joke categories. Pleas try again later'
     const state = { isError: true, error }
     const { getByText } = renderComponent(state)
 
