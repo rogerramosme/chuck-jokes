@@ -1,3 +1,6 @@
+#Chuck Jokes
+[![Build Status](https://travis-ci.com/rogerramosme/chuck-jokes.svg?branch=master)](https://travis-ci.com/rogerramosme/chuck-jokes)
+
 Just a cool Chuck Norris Jokes reader using [ChuckNorris.io](https://api.chucknorris.io/)
 
 > Chuck Norris has a grizzly bear carpet in his room.
