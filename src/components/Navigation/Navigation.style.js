@@ -7,7 +7,6 @@ export const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
   margin-top: 24px;
 `
 
