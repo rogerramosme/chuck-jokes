@@ -21,8 +21,9 @@ script:
   - npm run test:ci
   - npm run build
 deploy:
-  provider: netlify
-  site: $NETLIFY_SITE
-  auth: $NETLIFY_AUTH
-  dir: build/
-  edge: true
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local_dir: build
+  on:
+    branch: master
