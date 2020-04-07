@@ -10,6 +10,7 @@ export const ChuckJokesLogo = styled(BaseChuckJokesLogo)`
 
 export const CategoriesTitle = styled(Title)`
   margin-bottom: 14px;
+  text-align: center;
 `
 
 export const CategoriesIntro = styled(Body)`
