@@ -15,7 +15,7 @@ export const ROUTES = {
 }
 
 export default () => (
-  <Router history={createBrowserHistory()}>
+  <Router basename={process.env.PUBLIC_URL} history={createBrowserHistory()}>
     <Suspense fallback={<Loading />}>
       <Switch>
         <Route exact path={ROUTES.INTRO} component={Intro} />
