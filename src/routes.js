@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react'
 import Loading from 'components/Loading'
 import { createBrowserHistory } from 'history'
-import { Router, Switch, Route } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 
 const Intro = lazy(() => import('pages/Intro'))
 const Categories = lazy(() => import('pages/Categories'))
@@ -15,7 +15,7 @@ export const ROUTES = {
 }
 
 export default () => (
-  <Router basename={process.env.PUBLIC_URL} history={createBrowserHistory()}>
+  <Router history={createBrowserHistory()}>
     <Suspense fallback={<Loading />}>
       <Switch>
         <Route exact path={ROUTES.INTRO} component={Intro} />
