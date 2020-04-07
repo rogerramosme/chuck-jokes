@@ -21,25 +21,38 @@ const renderComponent = overWriteState => {
 }
 
 describe('Joke page', () => {
-  it('Should render loading state', () => {
-    const state = { isFetching: true }
-    const { getByTestId } = renderComponent(state)
+  describe('Loading', () => {
+    it('Should render general loading state', () => {
+      const state = { isFetching: true }
+      const { getByTestId } = renderComponent(state)
 
-    expect(getByTestId('loader')).toBeInTheDocument()
+      expect(getByTestId('loader')).toBeInTheDocument()
+    })
+
+    it('Should keep navigation visibile if any joke has loaded before', () => {
+      const joke = 'Joke content'
+      const state = { isFetching: true, isSuccess: true, data: { value: joke } }
+      const { getByTestId, getByText } = renderComponent(state)
+
+      expect(getByTestId('loader')).toBeInTheDocument()
+      expect(getByText('Categories')).toBeInTheDocument()
+    })
   })
 
-  it('Should render Joke', async () => {
-    const joke = 'Joke content'
-    const state = { isFetching: false, isSuccess: true, data: { value: joke } }
-    const { getByText } = renderComponent(state)
+  describe('Rendering', () => {
+    it('Should render Joke', () => {
+      const joke = 'Joke content'
+      const state = { isFetching: false, isSuccess: true, data: { value: joke } }
+      const { getByText } = renderComponent(state)
 
-    expect(getByText(joke)).toBeInTheDocument()
-  })
+      expect(getByText(joke)).toBeInTheDocument()
+    })
 
-  it('Should render Error page', () => {
-    const state = { isError: true }
-    const { getByText } = renderComponent(state)
+    it('Should render Error page', () => {
+      const state = { isError: true }
+      const { getByText } = renderComponent(state)
 
-    expect(getByText('Try again')).toBeInTheDocument()
+      expect(getByText('Try again')).toBeInTheDocument()
+    })
   })
 })

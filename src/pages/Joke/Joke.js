@@ -27,14 +27,20 @@ export default () => {
       {!isError ? (
         <Wrapper>
           {isFetching && <Loading data-testid="loader" />}
-          {!isFetching && isSuccess && (
+          {value && isSuccess && (
             <>
               <Navigation category={category} />
               <JokeWrapper>
-                <Joke>{value}</Joke>
-                <Button onClick={handleJokeRequest} outline>
-                  Roll another
-                </Button>
+                {isFetching ? (
+                  <Loading data-testid="reroll-loader" />
+                ) : (
+                  <>
+                    <Joke>{value}</Joke>
+                    <Button onClick={handleJokeRequest} outline>
+                      Roll another
+                    </Button>
+                  </>
+                )}
               </JokeWrapper>
             </>
           )}

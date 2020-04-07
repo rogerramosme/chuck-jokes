@@ -33,7 +33,6 @@ export default (state = initialState, { type, payload }) => {
       return {
         ...state,
         isFetching: true,
-        isSuccess: false,
         isError: false,
         error: null
       }
