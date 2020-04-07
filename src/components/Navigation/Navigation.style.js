@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { Subtitle } from 'components/Text'
 import backIcon from 'assets/icon-back.svg'
 
 export const Wrapper = styled.nav`
@@ -24,9 +25,6 @@ export const BackIcon = styled.img.attrs({
   margin-right: 8px;
 `
 
-export const CategoryName = styled.div`
-  font-size: ${props => props.theme.fonts.subtitle.fontSize};
-  line-height: ${props => props.theme.fonts.subtitle.lineHeight};
-  font-weight: ${props => props.theme.fonts.weight.normal};
+export const CategoryName = styled(Subtitle)`
   text-transform: capitalize;
 `
