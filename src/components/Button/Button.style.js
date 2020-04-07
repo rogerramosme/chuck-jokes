@@ -19,7 +19,7 @@ export default styled.button`
   border: solid 3px ${({ outline, theme }) => (outline ? theme.colors.black : 'transparent')};
 
   &:hover,
-  &focus {
+  &:focus {
     color: ${props => props.theme.colors.white};
     background-color: ${({ outline, theme }) => (outline ? theme.colors.black : theme.colors.grey)};
   }
