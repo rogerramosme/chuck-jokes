@@ -1,0 +1,40 @@
+{
+  "short_name": "Chuck Jokes",
+  "name": "Chuck Norris quick facts based on Chucknorris.io API",
+  "icons": [
+    {
+      "src": "logo16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "logo24.png",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
+      "src": "logo32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "logo64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "minimal-ui",
+  "theme_color": "#161212",
+  "background_color": "#fcd146"
+}
